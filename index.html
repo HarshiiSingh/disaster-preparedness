@@ -21,7 +21,7 @@
   </head>
   <body>
     <div class="page">
-       <header class="header">
+      <header class="header">
         <div class="header__text">
           <h1 class="header__title">Disaster Preparedness Checklist</h1>
           <p class="header__subtitle">So you're ready when you need it most</p>
@@ -50,123 +50,127 @@
           </ul>
         </nav>
       </header>
-
-    <div class="popup-overlay" id="popup-overlay"></div>
-    <div class="popups">
-      <!-- Hurricane -->
-      <button id="hurricane-button" class="popup__button">
-        Hurricane Emergency Checklist
-      </button>
-      <div class="popup" id="edit-hurricane-checklist">
-        <button class="close-popup"></button>
-        <h2 class="popup__title">Hurricane Emergency Checklist</h2>
-        <ul>
-          <li>
-            <input type="checkbox" /><input
-              class="checklist-item"
-              placeholder="Item or preparation"
-            />
-          </li>
-        </ul>
-      </div>
-      <!-- Wildfire -->
-      <button id="wildfire-button" class="popup__button">
-        Wildfire Emergency Checklist
-      </button>
-      <div class="popup" id="edit-wildfire-checklist">
-        <button class="close-popup"></button>
-        <h2 class="popup__title">Wildfire Emergency Checklist</h2>
-        <ul>
-          <li>
-            <input type="checkbox" /><input
-              class="checklist-item"
-              placeholder="Item or preparation"
-            />
-          </li>
-        </ul>
-      </div>
-      <!-- Snowstorm -->
-      <button id="snowstorm-button" class="popup__button">
-        Snowstorm Emergency Checklist
-      </button>
-      <div class="popup" id="edit-snowstorm-checklist">
-        <button class="close-popup"></button>
-        <h2 class="popup__title">Snowstorm Emergency Checklist</h2>
-        <ul>
-          <li>
-            <input type="checkbox" /><input
-              class="checklist-item"
-              placeholder="Item or preparation"
-            />
-          </li>
-        </ul>
-      </div>
-      <!-- Earthquake -->
-      <button id="earthquake-button" class="popup__button">
-        Earthquake Emergency Checklist
-      </button>
-      <div class="popup" id="edit-earthquake-checklist">
-        <button class="close-popup"></button>
-        <h2 class="popup__title">Earthquake Emergency Checklist</h2>
-        <ul>
-          <li>
-            <input type="checkbox" /><input
-              class="checklist-item"
-              placeholder="Item or preparation"
-            />
-          </li>
-        </ul>
-      </div>
-    </div>
       <main class="content">
+        <div class="popup-overlay" id="popup-overlay"></div>
         <section class="disaster page__section">
-        <ul class="disaster__list">
-          <li class="disaster-item">
-            <img
-              src="./images/disaster-snow.jpg"
-              alt="snow"
-              class="disaster__img"
-            />
-            <div class="disaster__content">
-              <h2 class="disaster__title">Snow Storm</h2>
-              <p class="disaster__text">It helps to know what to do to prepare for a snowstorm, this checklist should help with listing what is needed.</p>
+          <ul class="disaster__list">
+            <li class="disaster-item">
+              <button id="snowstorm-button" class="popup__button">
+                <img
+                  class="popup__button_image"
+                  src="./images/disaster-snow.jpg"
+                  alt="snow"
+                />
+              </button>
+              <div class="popup" id="edit-snowstorm-checklist">
+                <button class="close-popup"></button>
+                <h2 class="popup__title">Snowstorm Emergency Checklist</h2>
+                <ul>
+                  <li>
+                    <input type="checkbox" /><input
+                      class="checklist-item"
+                      placeholder="Item or preparation"
+                    />
+                  </li>
+                </ul>
+              </div>
+              <div class="disaster__content">
+                <h2 class="disaster__title">Snow Storm</h2>
+                <p class="disaster__text">
+                  It helps to know what to do to prepare for a snowstorm, this
+                  checklist should help with listing what is needed.
+                </p>
+              </div>
+            </li>
+            <li class="disaster-item">
+              <button id="hurricane-button" class="popup__button">
+                <img
+                  class="popup__button_image"
+                  src="./images/disaster-hurricane.jpg"
+                  alt="storm"
+                />
+              </button>
+              <div class="popup" id="edit-hurricane-checklist">
+                <button class="close-popup"></button>
+                <h2 class="popup__title">Hurricane Emergency Checklist</h2>
+                <ul>
+                  <li>
+                    <input type="checkbox" /><input
+                      class="checklist-item"
+                      placeholder="Item or preparation"
+                    />
+                  </li>
+                </ul>
+              </div>
+              <div class="disaster__content">
+                <h2 class="disaster__title">Hurricanes</h2>
+                <p class="disaster__text">
+                  Hurricanes can be very common depending on where you live, use
+                  this checklist to know what you can do to prepare for one.
+                </p>
+              </div>
+            </li>
+            <li class="disaster-item">
+              <button id="wildfire-button" class="popup__button">
+          <img
+            class="popup__button_image"
+            src="./images/disaster-fire.jpg"
+            alt="storm"
+          />
+        </button>
+        <div class="popup" id="edit-wildfire-checklist">
+          <button class="close-popup"></button>
+          <h2 class="popup__title">Wildfire Emergency Checklist</h2>
+          <ul>
+            <li>
+              <input type="checkbox" /><input
+                class="checklist-item"
+                placeholder="Item or preparation"
+              />
+            </li>
+          </ul>
+        </div>
+              <div class="disaster__content">
+                <h2 class="disaster__title">Fires</h2>
+                <p class="disaster__text">
+                  If there is a fire in your area you should be prepared to
+                  evacuate, this checklist may come in handy to prepare
+                  yourself.
+                </p>
+              </div>
+            </li>
+            <li class="disaster-item">
+              <button id="earthquake-button" class="popup__button">
+                <img
+                  class="popup__button_image"
+                  src="./images/disaster-earthquake.jpg"
+                  alt="earthquake"
+                />
+              </button>
+              <div class="popup" id="edit-earthquake-checklist">
+                <button class="close-popup"></button>
+                <h2 class="popup__title">Earthquake Emergency Checklist</h2>
+                <ul>
+                  <li>
+                    <input type="checkbox" /><input
+                      class="checklist-item"
+                      placeholder="Item or preparation"
+                    />
+                  </li>
+                </ul>
+              </div>
+              <div class="disaster__content">
+                <h2 class="disaster__title">Earthquakes</h2>
+                <p class="disaster__text">
+                  You should know what to do if you're experiencing an
+                  earthquake, this checklist will inform you on the steps that
+                  may be needed.
+                </p>
+              </div>
             </div>
-          </li>
-          <li class="disaster-item">
-            <img
-              src="./images/disaster-hurricane.jpg"
-              alt="hurricane"
-              class="disaster__img"
-            />
-            <div class="disaster__content">
-              <h2 class="disaster__title">Hurricanes</h2>
-              <p class="disaster__text">Hurricanes can be very common depending on where you live, use this checklist to know what you can do to prepare for one.</p>
-            </div>
-          </li>
-          <li class="disaster-item">
-            <img
-              src="./images/disaster-fire.jpg"
-              alt="fire"
-              class="disaster__img"
-            />
-            <div class="disaster__content">
-              <h2 class="disaster__title">Fires</h2>
-              <p class="disaster__text">If there is a fire in your area you should be prepared to evacuate, this checklist may come in handy to prepare yourself.</p>
-            </div>
-          </li>
-          <li class="disaster-item">
-            <img
-              src="./images/disaster-earthquake.jpg"
-              alt="earthquake"
-              class="disaster__img"
-            />
-            <div class="disaster__content">
-              <h2 class="disaster__title">Earthquakes</h2>
-              <p class="disaster__text">You should know what to do if you're experiencing an earthquake, this checklist will inform you on the steps that may be needed.</p>
-            </div>
-          </li>
-        </ul>
-      </section>
+            </li>
+          </ul>
+        </section>
       </main>
     </div>
 
