@@ -15,6 +15,7 @@
   color: black;
   padding: 50px;
   margin: 0;
+  color: rgb(50, 50, 50);
 }
 .header__title {
   z-index: 1;

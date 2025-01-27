@@ -5,6 +5,7 @@
   justify-content: center;
   margin: 0 auto;
   background-color: #dddedf;
+  color: rgb(50, 50, 50);
 }
 
 .disaster__list {
@@ -24,19 +25,16 @@
   height: 250px;
   border-radius: 200px;
   cursor: pointer;
-
 }
 
 .disaster__title {
   margin: 0 0 10px;
   padding: 0;
   font-weight: 700;
-
 }
 .disaster__text {
   margin: 0;
   padding: 0;
   width: 200px;
   box-sizing: border-box;
-
 }
