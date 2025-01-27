@@ -4,17 +4,49 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: white;
+  background: #dddedf;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  text-align: left;
-  width: 300px;
+  max-width: 300px;
   z-index: 1000;
 }
 
 .popup.active {
   display: block;
+}
+
+.popup__title {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500px;
+  margin: 15px 0 15px;
+}
+
+.popup__list {
+  list-style: none;
+  padding: 0 30px;
+}
+
+.popup__item {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin: 0 0 10px;
+}
+
+.popup__checkbox {
+  height: 15px;
+  width: 15px;
+  align-self: center;
+}
+
+.checklist-item {
+  font-family: FunnelSans, Arial, Helvetica, sans-serif;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 400;
+  padding-left: 5px;
 }
 
 .popup-overlay {
@@ -51,9 +83,9 @@
 }
 
 .close-popup {
-  background: red;
-  color: white;
-  border: none;
+  background-color: #dddedf;
+  color: black;
+  border: 1px solid;
   height: 20px;
   width: 15px;
   padding: 5px 10px;
@@ -65,5 +97,5 @@
 }
 
 .close-popup:hover {
-  background: darkred;
+  background-color: rgb(200, 200, 200);
 }
