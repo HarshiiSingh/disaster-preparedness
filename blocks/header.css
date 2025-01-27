@@ -1,9 +1,10 @@
 .header {
   z-index: 0;
-  width: 100%;
+  max-width: 1200px;
   position: relative;
   background-color: #dddedf;
   padding: 0;
+  margin: auto;
 }
 
 .header__text {
