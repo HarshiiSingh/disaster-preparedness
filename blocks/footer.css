@@ -3,6 +3,7 @@
   justify-content: space-between;
   max-width: 1280px;
   margin: auto;
+  padding: 20px;
 }
 
 .footer__list {

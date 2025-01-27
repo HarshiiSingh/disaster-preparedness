@@ -23,6 +23,11 @@
   display: block;
 }
 
+.popup__button {
+  background: none;
+  border: none;
+}
+
 .close-popup {
   background: black;
   color: white;
