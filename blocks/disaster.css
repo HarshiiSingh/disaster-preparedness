@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  background-color: gray;
+  background-color: #dddedf;
 }
 
 .disaster__list {
