@@ -1,0 +1,22 @@
+.content {
+  display: flex;
+  max-width: 1280px;
+  margin: auto;
+}
+
+.sidebar {
+  min-width: 320px;
+}
+
+.sidebar__nav {
+  padding: 0;
+  list-style-type: none;
+}
+
+.sidebar__link {
+  text-decoration: none;
+}
+
+.definitions__term {
+  font-weight: bold;
+}

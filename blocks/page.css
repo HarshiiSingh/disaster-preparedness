@@ -1,4 +1,11 @@
 .page {
   font-family: Arial, Helvetica, sans-serif;
-  min-height: 100vh;
+   min-width: 1100px;
+  max-width: 1600px;
+  margin: auto;
 }
+
+.page__section {
+  margin: auto;
+}
+
