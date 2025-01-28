@@ -1,5 +1,6 @@
 const modal = document.getElementById("modal__container");
 const overlay = document.getElementById("modal");
+const modalTitle = document.getElementById("modal__header");
 const openModalButtons = document.querySelectorAll(".modal__button");
 const closeModalButton = document.getElementById("modal__close-btn");
 const addButton = document.getElementById("modal__add-btn");
@@ -7,16 +8,56 @@ const checklist = document.getElementById("modal__checklist");
 const newItemInput = document.getElementById("modal__add-item");
 let currentChecklistKey;
 
+const initialChecklist = {
+  "snowstorm-button": {
+  title: "Snow Storm Checklist",
+  items: [
+    { text: "Warm clothing and blankets", checked: false },
+    { text: "Food and bottled water", checked: false },
+    { text: "Flashlights and extra batteries", checked: false },
+    { text: "Ice melt, sand, or chains for traction", checked: false },
+    { text: "Backup heating source", checked: false },
+  ]
+},
+  "hurricane-button": {
+  title: "Hurricane Checklist",
+  items: [
+    { text: "Waterproof storage for important documents", checked: false },
+    { text: "Battery packs for mobile devices", checked: false },
+    { text: "Extra prescription medications and first aid kit", checked: false },
+    { text: "Evacuation plan with emergency contacts", checked: false },
+    { text: "Sandbags or flood barriers for home protection", checked: false },
+  ]
+},
+  "wildfire-button": {
+  title: "WildFire Checklist",
+  items: [
+    { text: "N95 masks or respirators to filter smoke", checked: false },
+    { text: "Fire-resistant clothing and goggles", checked: false },
+    { text: "Emergency go-bag with essentials", checked: false },
+    { text: "Garden hose, buckets, and fire extinguisher", checked: false },
+    { text: "Battery-powered or solar phone charger", checked: false },
+  ]
+},
+  "earthquake-button": {
+  title: "Earthquake Checklist",
+  items: [
+    { text: "Sturdy shoes and gloves", checked: false },
+    { text: "Devices or tools to signal for help", checked: false },
+    { text: "Heavy-duty plastic sheeting and duct tape", checked: false },
+    { text: "Fire extinguisher for potential gas leaks", checked: false },
+    { text: "Water purification tools or chemicals", checked: false },
+  ]
+},
+
+}
+
 // LoadsChecklist after clicking the image button
 function loadChecklist(key) {
-  // Receives data from local storage, if no data then empty array
-  const items = JSON.parse(localStorage.getItem(key)) || [];
-  while (checklist.firstChild) {
-    checklist.removeChild(checklist.firstChild);
-  }
-
-  // the items from local storage are then added to the checklist
-  items.forEach((item) => {
+  const checklistItems = initialChecklist[key];
+  modalTitle.textContent = checklistItems.title;
+  checklist.textContent = '';
+  checklistItems.items.forEach(item => {
     addListItem(item.text, item.checked);
   });
 }
@@ -27,7 +68,7 @@ function saveChecklist(key) {
     text: li.querySelector("p").textContent,
     checked: li.querySelector("input").checked,
   }));
-  localStorage.setItem(key, JSON.stringify(items));
+  initialChecklist[key] = items;
 }
 
 // Adds new items to the checklist
@@ -84,5 +125,3 @@ addButton.addEventListener("click", () => {
   }
 });
 
-// Initialize checklist on page load
-loadChecklist(currentChecklistKey);
