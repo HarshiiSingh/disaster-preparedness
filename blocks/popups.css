@@ -40,6 +40,7 @@
   justify-content: space-between;
   padding: 5px 0;
 }
+
 .modal__checklist li input[type="checkbox"] {
   margin-right: 10px;
 }

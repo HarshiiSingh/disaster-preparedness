@@ -60,7 +60,7 @@ function addListItem(text, checked = false) {
 openModalButtons.forEach((button) => {
   button.addEventListener("click", () => {
     // pulls the checklist for the button using getAttribute
-    currentChecklistKey = button.getAttribute("data-checklist");
+    currentChecklistKey = button.getAttribute("id");
     modal.classList.add("open");
     overlay.classList.add("open");
     loadChecklist(currentChecklistKey);
