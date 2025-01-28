@@ -4,6 +4,8 @@
   max-width: 1200px;
   margin: auto;
   background-color: #787878;
+  box-sizing: border-box;
+  padding: 20px;
 }
 
 .footer__list {
