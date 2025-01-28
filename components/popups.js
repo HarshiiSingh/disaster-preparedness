@@ -10,59 +10,64 @@ let currentChecklistKey;
 
 const initialChecklist = {
   "snowstorm-button": {
-  title: "Snow Storm Checklist",
-  items: [
-    { text: "Warm clothing and blankets", checked: false },
-    { text: "Food and bottled water", checked: false },
-    { text: "Flashlights and extra batteries", checked: false },
-    { text: "Ice melt, sand, or chains for traction", checked: false },
-    { text: "Backup heating source", checked: false },
-  ]
-},
+    title: "Snow Storm Checklist",
+    items: [
+      { text: "Warm clothing and blankets", checked: false },
+      { text: "Food and bottled water", checked: false },
+      { text: "Flashlights and extra batteries", checked: false },
+      { text: "Ice melt, sand, or chains for traction", checked: false },
+      { text: "Backup heating source", checked: false },
+    ],
+  },
   "hurricane-button": {
-  title: "Hurricane Checklist",
-  items: [
-    { text: "Waterproof storage for important documents", checked: false },
-    { text: "Battery packs for mobile devices", checked: false },
-    { text: "Extra prescription medications and first aid kit", checked: false },
-    { text: "Evacuation plan with emergency contacts", checked: false },
-    { text: "Sandbags or flood barriers for home protection", checked: false },
-  ]
-},
+    title: "Hurricane Checklist",
+    items: [
+      { text: "Waterproof storage for important documents", checked: false },
+      { text: "Battery packs for mobile devices", checked: false },
+      {
+        text: "Extra prescription medications and first aid kit",
+        checked: false,
+      },
+      { text: "Evacuation plan with emergency contacts", checked: false },
+      {
+        text: "Sandbags or flood barriers for home protection",
+        checked: false,
+      },
+    ],
+  },
   "wildfire-button": {
-  title: "WildFire Checklist",
-  items: [
-    { text: "N95 masks or respirators to filter smoke", checked: false },
-    { text: "Fire-resistant clothing and goggles", checked: false },
-    { text: "Emergency go-bag with essentials", checked: false },
-    { text: "Garden hose, buckets, and fire extinguisher", checked: false },
-    { text: "Battery-powered or solar phone charger", checked: false },
-  ]
-},
+    title: "WildFire Checklist",
+    items: [
+      { text: "N95 masks or respirators to filter smoke", checked: false },
+      { text: "Fire-resistant clothing and goggles", checked: false },
+      { text: "Emergency go-bag with essentials", checked: false },
+      { text: "Garden hose, buckets, and fire extinguisher", checked: false },
+      { text: "Battery-powered or solar phone charger", checked: false },
+    ],
+  },
   "earthquake-button": {
-  title: "Earthquake Checklist",
-  items: [
-    { text: "Sturdy shoes and gloves", checked: false },
-    { text: "Devices or tools to signal for help", checked: false },
-    { text: "Heavy-duty plastic sheeting and duct tape", checked: false },
-    { text: "Fire extinguisher for potential gas leaks", checked: false },
-    { text: "Water purification tools or chemicals", checked: false },
-  ]
-},
-
-}
+    title: "Earthquake Checklist",
+    items: [
+      { text: "Sturdy shoes and gloves", checked: false },
+      { text: "Devices or tools to signal for help", checked: false },
+      { text: "Heavy-duty plastic sheeting and duct tape", checked: false },
+      { text: "Fire extinguisher for potential gas leaks", checked: false },
+      { text: "Water purification tools or chemicals", checked: false },
+    ],
+  },
+};
 
 // LoadsChecklist after clicking the image button
 function loadChecklist(key) {
   const checklistItems = initialChecklist[key];
   modalTitle.textContent = checklistItems.title;
-  checklist.textContent = '';
-  checklistItems.items.forEach(item => {
+  checklist.textContent = "";
+  checklistItems.items.forEach((item) => {
     addListItem(item.text, item.checked);
   });
 }
 
-// Saves current checklist to localStorage
+// Saves current checklist
 function saveChecklist(key) {
   const items = Array.from(checklist.children).map((li) => ({
     text: li.querySelector("p").textContent,
@@ -124,4 +129,3 @@ addButton.addEventListener("click", () => {
     saveChecklist(currentChecklistKey);
   }
 });
-

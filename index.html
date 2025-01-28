@@ -54,10 +54,7 @@
         <section class="disaster page__section">
           <ul class="disaster__list">
             <li class="disaster-item">
-              <button
-                id="snowstorm-button"
-                class="modal__button"
-              >
+              <button id="snowstorm-button" class="modal__button">
                 <img
                   class="popup__button_image"
                   src="./images/disaster-snow.jpg"
@@ -74,10 +71,7 @@
               </div>
             </li>
             <li class="disaster-item">
-              <button
-                id="hurricane-button"
-                class="modal__button"
-              >
+              <button id="hurricane-button" class="modal__button">
                 <img
                   class="popup__button_image"
                   src="./images/disaster-hurricane.jpg"
@@ -94,10 +88,7 @@
               </div>
             </li>
             <li class="disaster-item">
-              <button
-                id="wildfire-button"
-                class="modal__button"
-              >
+              <button id="wildfire-button" class="modal__button">
                 <img
                   class="popup__button_image"
                   src="./images/disaster-fire.jpg"
@@ -115,10 +106,7 @@
               </div>
             </li>
             <li class="disaster-item">
-              <button
-                id="earthquake-button"
-                class="modal__button"
-              >
+              <button id="earthquake-button" class="modal__button">
                 <img
                   class="popup__button_image"
                   src="./images/disaster-earthquake.jpg"
@@ -199,7 +187,9 @@
     </div>
 
     <div class="modal" id="modal"></div>
+
     <div id="modal__container" class="modal__container">
+      <button id="modal__close-btn">Close</button>
       <h2 class="modal__header" id="modal__header">Checklist</h2>
       <ul id="modal__checklist" class="modal__checklist"></ul>
       <input
@@ -208,10 +198,7 @@
         placeholder="Add new item"
         class="modal__add-item"
       />
-      <div class="modal__btns">
-        <button id="modal__add-btn">Add</button>
-        <button id="modal__close-btn">Close</button>
-      </div>
+      <button id="modal__add-btn">Add</button>
     </div>
     <script src="./components/popups.js"></script>
   </body>
