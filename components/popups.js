@@ -65,6 +65,8 @@ function loadChecklist(key) {
   checklistItems.items.forEach((item) => {
     addListItem(item.text, item.checked);
   });
+  modal.focus();
+  // Focuses on the modal__container
 }
 
 // Saves current checklist
@@ -118,6 +120,25 @@ closeModalButton.addEventListener("click", () => {
   overlay.classList.remove("open");
   saveChecklist(currentChecklistKey);
 });
+
+overlay.addEventListener("click", (evt) => {
+  if (evt.target === overlay) {
+    modal.classList.remove("open");
+    overlay.classList.remove("open");
+    saveChecklist(currentChecklistKey);
+  }
+});
+
+modal.setAttribute("tabindex", "0");
+// Sets the modal to be tabbable
+modal.addEventListener("keydown", (evt) => {
+  if (evt.key === "Escape") {
+    modal.classList.remove("open");
+    overlay.classList.remove("open");
+    saveChecklist(currentChecklistKey);
+  }
+});
+// Allows the modal to be closed with the escape key without using a document event listener
 
 addButton.addEventListener("click", () => {
   // This is how the to save new items to the checklist, it first gets the text from the input element and removes whitespace
