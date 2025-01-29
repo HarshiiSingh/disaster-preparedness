@@ -73,9 +73,7 @@ function saveChecklist(key) {
     text: li.querySelector("p").textContent,
     checked: li.querySelector("input").checked,
   }));
-
   initialChecklist[key].items = items;
-
 }
 
 // Adds new items to the checklist
