@@ -6,6 +6,7 @@
 - Description
 - Tech Stack
 - Images
+- Page Link
 
 ## Intro
 
@@ -28,19 +29,22 @@ add items to each of the list for added customization.
 ## Images
 
 ### Desktop
+
 [ ![](./images/readme-imgs/DesktopViewHeader_sm.jpg) ](./images/readme-imgs/DesktopViewHeader.jpg "Desktop view header")
 [ ![](./images/readme-imgs/DesktopViewMain_sm.jpg) ](./images/readme-imgs/DesktopViewMain.jpg "Desktop view main")
 [ ![](./images/readme-imgs/DesktopViewModal_sm.jpg) ](./images/readme-imgs/DesktopViewModal.jpg "Desktop view modal")
 [ ![](./images/readme-imgs/DesktopViewFooter_sm.jpg) ](./images/readme-imgs/DesktopViewFooter.jpg "Desktop view footer")
 
 ### Mobile
+
 [ ![](./images/readme-imgs/MobileViewHeader_sm.jpg)](./images/readme-imgs/MobileViewHeader.jpg "Mobile view header")[ ![](./images/readme-imgs/MobileViewMain_sm.jpg)](./images/readme-imgs/MobileViewMain.jpg "Mobile view main")
 [ ![](./images/readme-imgs/MobileViewModal_sm.jpg)](./images/readme-imgs/MobileViewModal.jpg "Mobile view modal")
 [ ![](./images/readme-imgs/MobileViewFooter_sm.jpg)](./images/readme-imgs/MobileViewFooter.jpg "Mobile view footer")
 
 ### Effects
+
 [ ![](./images/readme-imgs/HoverEffects_sm.jpg) ](./images/readme-imgs/HoverEffects.jpg "Hover effects")
 
-## Link
+## Page Link
 
 [Disaster Preparedness Website](https://harshiisingh.github.io/disaster-preparedness/ "Disaster Preparedness")
