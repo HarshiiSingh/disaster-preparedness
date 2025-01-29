@@ -36,24 +36,24 @@
         <nav class="nav">
           <ul class="nav__links">
             <li>
-              <a class="nav__link" href="">Checklists</a>
+              <a class="nav__link" href="#checklists">Checklists</a>
             </li>
             <li>
-              <a class="nav__link" href="">About</a>
+              <a class="nav__link" href="#about">About</a>
             </li>
             <li>
-              <a class="nav__link" href="">Useful links</a>
+              <a class="nav__link" href="#useful">Useful links</a>
             </li>
           </ul>
         </nav>
       </header>
       <main class="content">
-        <section class="disaster page__section">
+        <section class="disaster page__section" id="checklists">
           <ul class="disaster__list">
-            <li class="disaster-item">
+            <li class="disaster__item">
               <button id="snowstorm-button" class="modal__button">
                 <img
-                  class="popup__button_image"
+                  class="disaster__img"
                   src="./images/disaster-snow.jpg"
                   alt="snow"
                 />
@@ -67,10 +67,10 @@
                 </p>
               </div>
             </li>
-            <li class="disaster-item">
+            <li class="disaster__item">
               <button id="hurricane-button" class="modal__button">
                 <img
-                  class="popup__button_image"
+                  class="disaster__img"
                   src="./images/disaster-hurricane.jpg"
                   alt="storm"
                 />
@@ -84,10 +84,10 @@
                 </p>
               </div>
             </li>
-            <li class="disaster-item">
+            <li class="disaster__item">
               <button id="wildfire-button" class="modal__button">
                 <img
-                  class="popup__button_image"
+                  class="disaster__img"
                   src="./images/disaster-fire.jpg"
                   alt="storm"
                 />
@@ -102,10 +102,10 @@
                 </p>
               </div>
             </li>
-            <li class="disaster-item">
+            <li class="disaster__item">
               <button id="earthquake-button" class="modal__button">
                 <img
-                  class="popup__button_image"
+                  class="disaster__img"
                   src="./images/disaster-earthquake.jpg"
                   alt="earthquake"
                 />
@@ -130,72 +130,72 @@
           <p class="footer__item">Team Readyness</p>
         </div>
         <div class="footer__column">
-          <h3 class="footer__title">Contact Info</h3>
+          <h3 class="footer__title" id="about">Contact Info</h3>
           <ul class="footer__list">
             <li class="footer__item">
-              <a class="footer__link" href="https://github.com/nini2nis"
+              <a class="footer__link" href="https://github.com/nini2nis" target="_blank"
                 >Anisa Baravalle</a
               >
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="https://github.com/HarshiiSingh"
+              <a class="footer__link" href="https://github.com/HarshiiSingh" target="_blank"
                 >Harshi Singh</a
               >
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="https://github.com/Hwettstein"
+              <a class="footer__link" href="https://github.com/Hwettstein" target="_blank"
                 >Howard Wettstein</a
               >
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="https://github.com/Julesdowork"
+              <a class="footer__link" href="https://github.com/Julesdowork" target="_blank"
                 >Julian McNeill</a
               >
             </li>
           </ul>
         </div>
         <div class="footer__column">
-          <h3 class="footer__title">Useful Links</h3>
+          <h3 class="footer__title" id="useful">Useful Links</h3>
           <ul class="footer__list">
             <li class="footer__item">
-              <a class="footer__link" href="./glossary.html"
+              <a class="footer__link" href="./glossary.html" target="_blank"
                 >Glossary of Terms</a
               >
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="https://www.redcross.org/"
+              <a class="footer__link" href="https://www.redcross.org/" target="_blank"
                 >American Red Cross</a
               >
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="https://www.disasterassistance.gov/"
+              <a class="footer__link" href="https://www.disasterassistance.gov/" target="_blank"
                 >Disaster Assistance</a
               >
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="https://www.fema.gov/">FEMA</a>
+              <a class="footer__link" href="https://www.fema.gov/" target="_blank">FEMA</a>
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="https://www.usa.gov/">USAGov</a>
+              <a class="footer__link" href="https://www.usa.gov/" target="_blank">USAGov</a>
             </li>
           </ul>
         </div>
       </footer>
-    </div>
-
-    <div class="modal" id="modal"></div>
-
-    <div id="modal__container" class="modal__container">
-      <button id="modal__close-btn">Close</button>
-      <h2 class="modal__header" id="modal__header">Checklist</h2>
-      <ul id="modal__checklist" class="modal__checklist"></ul>
-      <input
-        type="text"
-        id="modal__add-item"
-        placeholder="Add new item"
-        class="modal__add-item"
-      />
-      <button id="modal__add-btn">Add</button>
+      <div class="modal" id="modal">
+      <div id="modal__container" class="modal__container">
+        <button class="modal__close-btn" id="modal__close-btn">Close</button>
+        <h2 class="modal__header" id="modal__header">Checklist</h2>
+          <ul id="modal__checklist" class="modal__checklist"></ul>
+        <div class="modal__add-item-container">
+          <input
+            type="text"
+            id="modal__add-item"
+            placeholder="Add new item"
+            class="modal__add-item"
+          />
+          <button class="modal__add-btn" id="modal__add-btn">Add</button>
+        </div>
+      </div>
     </div>
     <script src="./components/popups.js"></script>
   </body>

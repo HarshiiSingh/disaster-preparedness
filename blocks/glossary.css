@@ -20,3 +20,7 @@
 .definitions__term {
   font-weight: bold;
 }
+
+@media screen and (max-width: 627px) {
+  /* ----- TO DO ------ */
+}

@@ -12,7 +12,7 @@
   );
   color: rgb(50, 50, 50);
   box-sizing: border-box;
-  padding 20px;
+  padding: 20px;
 }
 
 .footer__column {
@@ -46,4 +46,8 @@
   opacity: 100%;
   color: rgb(202, 209, 203);
   text-shadow: 0 0 15px black;
+}
+
+@media screen and (max-width: 627px) {
+  /* ----- TO DO ------ */
 }

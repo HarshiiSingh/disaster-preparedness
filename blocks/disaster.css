@@ -13,7 +13,7 @@
   padding: 0;
 }
 
-.disaster-item {
+.disaster__item {
   display: flex;
   align-items: center;
   gap: 30px;
@@ -24,17 +24,30 @@
   width: 250px;
   height: 250px;
   border-radius: 200px;
+}
+
+.disaster__img:hover {
+  border: 5px solid #93ad5e;
+  transition: 1s ease-out;
   cursor: pointer;
 }
 
 .disaster__title {
   margin: 0 0 10px;
   padding: 0;
-  font-weight: 700;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 1.2;
 }
 .disaster__text {
+  font-size: 16px;
+  line-height: 1.2;
   margin: 0;
   padding: 0;
-  width: 200px;
+  max-width: 200px;
   box-sizing: border-box;
+}
+
+@media screen and (max-width: 627px) {
+  /* ----- TO DO ------ */
 }
