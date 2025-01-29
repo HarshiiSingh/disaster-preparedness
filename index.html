@@ -48,29 +48,17 @@
         </nav>
       </header>
       <main class="content">
-        <div class="popup-overlay" id="popup-overlay"></div>
         <section class="disaster page__section">
           <ul class="disaster__list">
             <li class="disaster-item">
-              <button id="snowstorm-button" class="popup__button">
+              <button id="snowstorm-button" class="modal__button">
                 <img
                   class="popup__button_image"
                   src="./images/disaster-snow.jpg"
                   alt="snow"
                 />
               </button>
-              <div class="popup" id="edit-snowstorm-checklist">
-                <button class="close-popup"></button>
-                <h2 class="popup__title">Snowstorm Emergency Checklist</h2>
-                <ul class="popup__list">
-                  <li class="popup__item">
-                    <input class="popup__checkbox" type="checkbox" /><input
-                      class="checklist-item"
-                      placeholder="Item or preparation"
-                    />
-                  </li>
-                </ul>
-              </div>
+
               <div class="disaster__content">
                 <h2 class="disaster__title">Snow Storm</h2>
                 <p class="disaster__text">
@@ -80,25 +68,14 @@
               </div>
             </li>
             <li class="disaster-item">
-              <button id="hurricane-button" class="popup__button">
+              <button id="hurricane-button" class="modal__button">
                 <img
                   class="popup__button_image"
                   src="./images/disaster-hurricane.jpg"
                   alt="storm"
                 />
               </button>
-              <div class="popup" id="edit-hurricane-checklist">
-                <button class="close-popup"></button>
-                <h2 class="popup__title">Hurricane Emergency Checklist</h2>
-                <ul class="popup__list">
-                  <li class="popup__item">
-                    <input class="popup__checkbox" type="checkbox" /><input
-                      class="checklist-item"
-                      placeholder="Item or preparation"
-                    />
-                  </li>
-                </ul>
-              </div>
+
               <div class="disaster__content">
                 <h2 class="disaster__title">Hurricanes</h2>
                 <p class="disaster__text">
@@ -108,26 +85,14 @@
               </div>
             </li>
             <li class="disaster-item">
-              <button id="wildfire-button" class="popup__button">
+              <button id="wildfire-button" class="modal__button">
                 <img
                   class="popup__button_image"
                   src="./images/disaster-fire.jpg"
                   alt="storm"
                 />
               </button>
-              <div class="popup" id="edit-wildfire-checklist">
-                <button class="close-popup"></button>
-                <h2 class="popup__title">Wildfire Emergency Checklist</h2>
-                <ul class="popup__list">
-                  <li class="popup__item">
-                    <input class="popup__checkbox" type="checkbox" />
-                    <input
-                      class="checklist-item"
-                      placeholder="Item or preparation"
-                    />
-                  </li>
-                </ul>
-              </div>
+
               <div class="disaster__content">
                 <h2 class="disaster__title">Fires</h2>
                 <p class="disaster__text">
@@ -138,25 +103,14 @@
               </div>
             </li>
             <li class="disaster-item">
-              <button id="earthquake-button" class="popup__button">
+              <button id="earthquake-button" class="modal__button">
                 <img
                   class="popup__button_image"
                   src="./images/disaster-earthquake.jpg"
                   alt="earthquake"
                 />
               </button>
-              <div class="popup" id="edit-earthquake-checklist">
-                <button class="close-popup"></button>
-                <h2 class="popup__title">Earthquake Emergency Checklist</h2>
-                <ul class="popup__list">
-                  <li class="popup__item">
-                    <input class="popup__checkbox" type="checkbox" /><input
-                      class="checklist-item"
-                      placeholder="Item or preparation"
-                    />
-                  </li>
-                </ul>
-              </div>
+
               <div class="disaster__content">
                 <h2 class="disaster__title">Earthquakes</h2>
                 <p class="disaster__text">
@@ -227,6 +181,21 @@
           </ul>
         </div>
       </footer>
+    </div>
+
+    <div class="modal" id="modal"></div>
+
+    <div id="modal__container" class="modal__container">
+      <button id="modal__close-btn">Close</button>
+      <h2 class="modal__header" id="modal__header">Checklist</h2>
+      <ul id="modal__checklist" class="modal__checklist"></ul>
+      <input
+        type="text"
+        id="modal__add-item"
+        placeholder="Add new item"
+        class="modal__add-item"
+      />
+      <button id="modal__add-btn">Add</button>
     </div>
     <script src="./components/popups.js"></script>
   </body>
