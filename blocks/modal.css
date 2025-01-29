@@ -1,0 +1,225 @@
+.modal {
+  display: none;
+  position: fixed;
+}
+
+.modal.open {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: visibility 0.5s linear, opacity 0.5s linear;
+}
+
+.modal__container {
+  display: none;
+  position: fixed;
+}
+
+.modal__container.open {
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #bfe17c;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  max-width: 350px;
+  padding: 20px;
+  z-index: 3;
+}
+
+.modal__header {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+  margin: 15px 0;
+}
+
+.modal__checklist {
+  padding: 0 30px;
+}
+
+.modal__checklist li {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  margin: 0 0 20px;
+}
+
+.modal__checklist li input[type="checkbox"] {
+  list-style-type: none;
+  align-self: center;
+  justify-self: center;
+  transform: scale(1.5);
+  accent-color: #01b701;
+  filter: opacity(80%);
+}
+
+.modal__checklist li input[type="checkbox"]:hover {
+  filter: opacity(100%);
+  cursor: pointer;
+}
+
+.modal__checklist li p {
+  font-size: 16px;
+  width: 160px;
+  margin: 0;
+}
+
+.modal__checklist li button {
+  align-self: center;
+  padding: 0;
+  background-color: transparent;
+  border: 1px solid #bdbdbd;
+  border-radius: 3px;
+  color: rgb(102, 102, 102);
+  font-size: 14px;
+  width: 66px;
+  height: 22px;
+}
+
+.modal__checklist li button:hover {
+  background-color: rgb(200, 200, 200);
+  color: rgb(50, 50, 50);
+  cursor: pointer;
+}
+
+.modal__checklist li button[type="text"] {
+  margin: 0 0 5px 0;
+}
+
+.modal__button {
+  border: none;
+  cursor: pointer;
+  background: transparent;
+}
+
+.modal__close-btn {
+  background-color: #bfe17c;
+  border: 2px solid #e6fcbb;
+  color: rgb(102, 102, 102);
+  height: 22px;
+  width: 55px;
+  border-radius: 3px;
+  font-size: 14px;
+  position: absolute;
+  top: 10px;
+  left: calc(100% - 70px);
+}
+
+.modal__close-btn:hover {
+  background-color: rgb(200, 200, 200);
+  cursor: pointer;
+}
+
+.modal__add-item-container {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  justify-content: center;
+  padding: 0 0 10px;
+}
+
+.modal__add-item {
+  padding: 0 0 0 15px;
+  margin: 0;
+  text-align: center;
+  max-width: 150px;
+  border-radius: 5px;
+  border: 1.5px solid #6ea500;
+  font-family: FunnelSans, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: rgb(50, 50, 50);
+}
+
+.modal__add-item:focus {
+  border: 1px solid rgb(50, 50, 50);
+  outline: none;
+}
+
+.modal__add-btn {
+  background-color: #bfe17c;
+  border: 2px solid #e6fcbb;
+  color: rgb(102, 102, 102);
+  height: 22px;
+  width: 40px;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.modal__add-btn:hover {
+  background-color: rgb(200, 200, 200);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 627px) {
+  .modal__container.open {
+    max-width: 260px;
+  }
+
+  .modal__header {
+    font-size: 20px;
+    margin: 10px 0;
+    padding: 15px 0 0;
+  }
+
+  .modal__checklist {
+    padding: 0 10px;
+  }
+
+  .modal__checklist li {
+    gap: 10px;
+    margin: 0 0 10px;
+  }
+
+  .modal__checklist li input[type="checkbox"] {
+    transform: scale(1.2);
+  }
+
+  .modal__checklist li p {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .modal__checklist li button {
+    font-size: 12px;
+    width: 55px;
+    height: 20px;
+  }
+
+  .modal__checklist li button[type="text"] {
+    margin: 0 0 5px 0;
+  }
+
+  .modal__button {
+    border: none;
+    cursor: pointer;
+    background: transparent;
+  }
+
+  .modal__close-btn {
+    height: 20px;
+    width: 40px;
+    font-size: 12px;
+    left: calc(100% - 50px);
+    padding: 1px 0;
+  }
+
+  .modal__add-item-container {
+    gap: 5px;
+  }
+
+  .modal__add-item {
+    margin: 0;
+    font-size: 14px;
+    height: 20px;
+    padding: 0;
+  }
+
+  .modal__add-btn {
+    height: 20px;
+    width: 34px;
+    font-size: 12px;
+    padding: 1px 0;
+  }
+}

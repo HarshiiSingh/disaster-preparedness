@@ -1,7 +1,9 @@
 const modal = document.getElementById("modal__container");
 const overlay = document.getElementById("modal");
 const modalTitle = document.getElementById("modal__header");
-const openModalButtons = document.querySelectorAll(".modal__button");
+const openModalButtons = document.querySelectorAll(
+  ".modal__button, .disaster__title"
+);
 const closeModalButton = document.getElementById("modal__close-btn");
 const addButton = document.getElementById("modal__add-btn");
 const checklist = document.getElementById("modal__checklist");
@@ -65,8 +67,10 @@ function loadChecklist(key) {
   checklistItems.items.forEach((item) => {
     addListItem(item.text, item.checked);
   });
+
+  modal.classList.add("open");
+  overlay.classList.add("open");
   modal.focus();
-  // Focuses on the modal__container
 }
 
 // Saves current checklist
@@ -124,10 +128,9 @@ function handleEnterPressed(evt) {
 // Event listeners
 openModalButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    // pulls the checklist for the button using getAttribute
-    currentChecklistKey = button.getAttribute("id");
-    modal.classList.add("open");
-    overlay.classList.add("open");
+    const container = button.closest(".disaster__item");
+    const openButton = container.querySelector(".modal__button");
+    currentChecklistKey = openButton.getAttribute("id");
     loadChecklist(currentChecklistKey);
     document.addEventListener("keydown", handleEnterPressed);
   });

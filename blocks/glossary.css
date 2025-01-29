@@ -97,3 +97,7 @@
     min-width: 0;
   }
 }
+
+@media screen and (max-width: 627px) {
+  /* ----- TO DO ------ */
+}
