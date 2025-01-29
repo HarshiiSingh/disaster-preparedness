@@ -30,8 +30,8 @@
 .modal__header {
   text-align: center;
   font-size: 24px;
-  font-weight: 500px;
-  margin: 15px 0 15px;
+  font-weight: 500;
+  margin: 15px 0;
 }
 
 .modal__checklist {
@@ -42,6 +42,7 @@
   display: flex;
   flex-direction: row;
   gap: 30px;
+  margin: 0 0 20px;
 }
 
 .modal__checklist li input[type="checkbox"] {
@@ -59,13 +60,11 @@
 
 .modal__checklist li p {
   font-size: 16px;
-  margin: 0 0 15px;
   width: 160px;
+  margin: 0;
 }
 
 .modal__checklist li button {
-  width: 80px;
-  height: 20px;
   align-self: center;
   padding: 0;
   background-color: transparent;
@@ -73,7 +72,7 @@
   border-radius: 3px;
   color: rgb(102, 102, 102);
   font-size: 14px;
-  width: 72px;
+  width: 66px;
   height: 22px;
 }
 
@@ -84,11 +83,6 @@
 
 .modal__checklist li button[type="text"] {
   margin: 0 0 5px 0;
-}
-
-.modal__add-item {
-  margin-top: 10px;
-  font-size: 18px;
 }
 
 .modal__button {
@@ -112,7 +106,6 @@
 
 .modal__close-btn:hover {
   background-color: rgb(200, 200, 200);
-  cursor: pointer;
 }
 
 .modal__add-item-container {
@@ -152,9 +145,77 @@
 
 .modal__add-btn:hover {
   background-color: rgb(200, 200, 200);
-  cursor: pointer;
 }
 
 @media screen and (max-width: 627px) {
-  /* ----- TO DO ------ */
+  .modal__container.open {
+    max-width: 260px;
+  }
+
+  .modal__header {
+    font-size: 20px;
+    margin: 10px 0;
+    padding: 15px 0 0;
+  }
+
+  .modal__checklist {
+    padding: 0 10px;
+  }
+
+  .modal__checklist li {
+    gap: 10px;
+    margin: 0 0 10px;
+  }
+
+  .modal__checklist li input[type="checkbox"] {
+    transform: scale(1.2);
+  }
+
+  .modal__checklist li p {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .modal__checklist li button {
+    font-size: 12px;
+    width: 55px;
+    height: 20px;
+  }
+
+  .modal__checklist li button[type="text"] {
+    margin: 0 0 5px 0;
+  }
+
+  .modal__button {
+    border: none;
+    cursor: pointer;
+    background: transparent;
+  }
+
+  .modal__close-btn {
+    height: 20px;
+    width: 40px;
+    font-size: 12px;
+    left: calc(100% - 50px);
+    padding: 1px 0;
+  }
+
+  .modal__add-item-container {
+    gap: 5px;
+  }
+
+  .modal__add-item {
+    margin: 0;
+    font-size: 14px;
+    height: 20px;
+    padding: 0;
+  }
+
+  .modal__add-btn {
+    height: 20px;
+    width: 34px;
+    font-size: 12px;
+    padding: 1px 0;
+  }
 }

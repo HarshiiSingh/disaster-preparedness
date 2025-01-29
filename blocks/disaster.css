@@ -29,7 +29,6 @@
 .disaster__img:hover {
   border: 5px solid #93ad5e;
   transition: 1s ease-out;
-  cursor: pointer;
 }
 
 .disaster__title {
@@ -39,6 +38,13 @@
   font-size: 22px;
   line-height: 1.2;
 }
+
+.disaster__title:hover {
+  opacity: 100%;
+  color: #bfe17c;
+  text-shadow: 0 0 15px black;
+}
+
 .disaster__text {
   font-size: 16px;
   line-height: 1.2;
@@ -49,5 +55,25 @@
 }
 
 @media screen and (max-width: 627px) {
-  /* ----- TO DO ------ */
+  .disaster {
+    max-width: 400px;
+  }
+
+  .disaster__list {
+    padding: 0 10px 10px;
+    margin: 0;
+  }
+
+  .disaster__item {
+    margin: 0 10px 20px;
+  }
+
+  .disaster__img {
+    width: 75px;
+    height: 75px;
+  }
+
+  .disaster__title {
+    font-size: 20px;
+  }
 }
