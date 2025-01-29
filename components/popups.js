@@ -102,6 +102,23 @@ function addListItem(text, checked = false) {
   checklist.append(li);
 }
 
+function handleAddingNewItem() {
+  // This is how the to save new items to the checklist, it first gets the text from the input element and removes whitespace
+  const text = newItemInput.value.trim();
+  // If the user has typed text in the input box then after clicking the addButton it adds the new list with the text element and then erases the value for the input so user can add another
+  if (text) {
+    addListItem(text);
+    newItemInput.value = "";
+    saveChecklist(currentChecklistKey);
+  }
+}
+
+function handleEnterPressed(evt) {
+  if (evt.key === "Enter") {
+    handleAddingNewItem();
+  }
+}
+
 // Event listeners
 openModalButtons.forEach((button) => {
   button.addEventListener("click", () => {
@@ -111,21 +128,15 @@ openModalButtons.forEach((button) => {
     overlay.classList.add("open");
     loadChecklist(currentChecklistKey);
   });
+
+  document.addEventListener("keydown", handleEnterPressed);
 });
 
 closeModalButton.addEventListener("click", () => {
   modal.classList.remove("open");
   overlay.classList.remove("open");
   saveChecklist(currentChecklistKey);
+  document.removeEventListener("keydown", handleEnterPressed);
 });
 
-addButton.addEventListener("click", () => {
-  // This is how the to save new items to the checklist, it first gets the text from the input element and removes whitespace
-  const text = newItemInput.value.trim();
-  // If the user has typed text in the input box then after clicking the addButton it adds the new list with the text element and then erases the value for the input so user can add another
-  if (text) {
-    addListItem(text);
-    newItemInput.value = "";
-    saveChecklist(currentChecklistKey);
-  }
-});
+addButton.addEventListener("click", handleAddingNewItem);
