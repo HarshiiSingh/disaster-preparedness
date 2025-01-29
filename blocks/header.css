@@ -15,12 +15,13 @@
   color: black;
   padding: 50px;
   margin: 0;
+  color: rgb(50, 50, 50);
 }
 .header__title {
   z-index: 1;
   font-size: 68px;
   line-height: 1.2;
-  font-weight: 600;
+  font-weight: 500;
   margin: 30px 0 0;
 }
 
@@ -29,6 +30,7 @@
   font-size: 48px;
   line-height: 1.2;
   font-style: italic;
+  font-weight: 400px;
   margin: 25px 0 25px;
 }
 
@@ -48,12 +50,12 @@
   }
 
   .header__title {
-    font-size: 36px;
+    font-size: 30px;
     margin: 40px 0 0;
   }
 
   .header__subtitle {
-    font-size: 24px;
+    font-size: 22px;
     margin: 20px 0 25px;
   }
 
