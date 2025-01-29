@@ -51,9 +51,7 @@
 @media screen and (max-width: 627px) {
   .footer {
     flex-direction: column;
-    /* justify-content: center; */
     align-items: center;
-    /* display: block; */
   }
 
   .footer__column {
