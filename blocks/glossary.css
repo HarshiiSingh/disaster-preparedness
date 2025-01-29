@@ -1,9 +1,7 @@
-/* .glossary-page {
-  max-width: 1200px;
-  margin: auto;
-  padding: 20px;
-  box-sizing: border-box;
-} */
+.header {
+  background: url("../images/background.jpg") left/contain no-repeat;
+  background-color: #dddedf
+}
 
 .glossary-content {
   max-width: 1200px;
@@ -18,7 +16,8 @@
 }
 
 .sidebar__title {
-  padding: 0 10px;
+  margin: 0;
+  padding: 10px;
   color: #e9e9e9;
   font-size: 24px;
 }
@@ -60,7 +59,8 @@
   border-bottom: 1px solid #969696;
 }
 
-.header__title {
+.content__title {
+  font-size: 32px;
   margin: 0;
 }
 
