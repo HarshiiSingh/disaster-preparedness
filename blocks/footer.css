@@ -11,6 +11,8 @@
     rgba(150, 150, 150, 1) 100%
   );
   color: rgb(50, 50, 50);
+  box-sizing: border-box;
+  padding: 20px;
 }
 
 .footer__column {
@@ -44,4 +46,23 @@
   opacity: 100%;
   color: rgb(202, 209, 203);
   text-shadow: 0 0 15px black;
+}
+
+@media screen and (max-width: 627px) {
+  .footer {
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    /* display: block; */
+  }
+
+  .footer__column {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+
+  .footer__column:nth-of-type(1) {
+    order: 2;
+  }
 }
