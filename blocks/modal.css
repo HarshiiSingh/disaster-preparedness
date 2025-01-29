@@ -157,6 +157,8 @@
 }
 
 @media screen and (max-width: 627px) {
+  .modal {
+  }
   .modal__container.open {
     max-width: 260px;
   }
