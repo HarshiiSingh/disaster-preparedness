@@ -56,6 +56,7 @@
 
 .modal__checklist li input[type="checkbox"]:hover {
   filter: opacity(100%);
+  cursor: pointer;
 }
 
 .modal__checklist li p {
@@ -79,6 +80,7 @@
 .modal__checklist li button:hover {
   background-color: rgb(200, 200, 200);
   color: rgb(50, 50, 50);
+  cursor: pointer;
 }
 
 .modal__checklist li button[type="text"] {
@@ -106,6 +108,7 @@
 
 .modal__close-btn:hover {
   background-color: rgb(200, 200, 200);
+  cursor: pointer;
 }
 
 .modal__add-item-container {
@@ -145,6 +148,7 @@
 
 .modal__add-btn:hover {
   background-color: rgb(200, 200, 200);
+  cursor: pointer;
 }
 
 @media screen and (max-width: 627px) {
