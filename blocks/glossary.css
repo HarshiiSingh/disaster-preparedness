@@ -1,22 +1,99 @@
-.content {
+.header {
+  background: url("../images/background.jpg") left/contain no-repeat;
+  background-color: #dddedf
+}
+
+.glossary-content {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
-  max-width: 1280px;
-  margin: auto;
 }
 
 .sidebar {
   min-width: 320px;
+  background-color: #84a149;
+  max-width: 100%;
+}
+
+.sidebar__title {
+  margin: 0;
+  padding: 10px;
+  color: #e9e9e9;
+  font-size: 24px;
 }
 
 .sidebar__nav {
   padding: 0;
+  margin: 0;
   list-style-type: none;
 }
 
 .sidebar__link {
   text-decoration: none;
+  color: #e9e9e9;
+}
+
+.sidebar__link:visited {
+  color: #e9e9e9;
+}
+
+.sidebar__nav-item {
+  padding: 10px;
+  border-top: 1px solid #526923;
+}
+
+.sidebar__nav_item:last-of-type {
+  border-bottom: 1px solid #526923;
+}
+
+.sidebar__nav-item:hover {
+  background-color: #6c8636;
+}
+
+.region-content {
+  background-color: #dddedf;
+  padding: 20px;
+}
+
+.content-header {
+  border-bottom: 1px solid #969696;
+}
+
+.content__title {
+  font-size: 32px;
+  margin: 0;
+}
+
+.definitions {
+  padding: 25px 0 0;
+  margin-bottom: 45px;
 }
 
 .definitions__term {
   font-weight: bold;
+  margin: 20px 0 10px;
+}
+
+.region-content-link {
+  color: #242424;
+  text-decoration: none;
+}
+
+.region-content-link:visited {
+  color: #242424;
+}
+
+.region-content-link:hover {
+  color: #242424;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 627px) {
+  .glossary-content {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    min-width: 0;
+  }
 }

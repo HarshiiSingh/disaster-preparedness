@@ -14,6 +14,42 @@
   display: block;
 }
 
+.popup__button {
+  width: 250px;
+  height: 250px;
+  border-radius: 200px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.popup__button_image {
+  width: 250px;
+  height: 250px;
+  border-radius: 200px;
+  margin: 0;
+  padding: 0;
+}
+
+.close-popup {
+  background: red;
+  color: white;
+  border: none;
+  height: 20px;
+  width: 15px;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.close-popup:hover {
+  background: darkred;
+}
+
 .modal__container {
   display: none;
   position: fixed;
@@ -28,6 +64,7 @@
   padding: 20px;
   z-index: 3;
 }
+
 .modal__container.open {
   display: block;
 }
@@ -69,10 +106,4 @@
   border-radius: 200px;
   margin: 0;
   padding: 0;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 20px;
-
 }
