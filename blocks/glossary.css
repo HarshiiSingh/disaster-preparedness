@@ -30,6 +30,11 @@
 
 .sidebar__link {
   text-decoration: none;
+  color: #e9e9e9;
+}
+
+.sidebar__nav-item:hover {
+  background-color: #6c8636;
 }
 
 .sidebar__link:visited {
@@ -37,7 +42,7 @@
 }
 
 .region-content {
-  background-color: #e9e9e9;
+  background-color: #dddedf;
   padding: 20px;
 }
 
@@ -51,6 +56,7 @@
 
 .definitions {
   padding: 25px 0 0;
+  margin-bottom: 45px;
 }
 
 .definitions__term {
@@ -58,5 +64,16 @@
   margin: 20px 0 10px;
 }
 
-.definitions__description {
+.region-content-link {
+  color: #242424;
+  text-decoration: none;
+}
+
+.region-content-link:visited {
+  color: #242424;
+}
+
+.region-content-link:hover {
+  color: #242424;
+  text-decoration: underline;
 }
