@@ -60,6 +60,7 @@
 .modal__button {
   border: none;
   cursor: pointer;
+  background: transparent;
 }
 
 .popup__button_image {
@@ -75,5 +76,3 @@ body {
   margin: 20px;
 
 }
-
-
